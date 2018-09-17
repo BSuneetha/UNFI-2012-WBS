@@ -1,0 +1,4 @@
+Senario Name,Test Name,Browser Name,Os Name,Test Status,Test Data Row,Link to Screen Shot,Error Log,Type
+iFusion,ExcelSecurityTest,Desktop,WIN10,Passed,NA,NA,NA,Regression
+iFusion,OneNoteSecurityTest,Desktop,WIN10,Passed,NA,NA,NA,Regression
+iFusion,WordSecurityTest,Desktop,WIN10,Passed,NA,NA,NA,Regression

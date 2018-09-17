@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="15" guice-stage="DEVELOPMENT" name="Failed suite [WM Automation Suite]">
+  <listeners>
+    <listener class-name="com.innominds.team.listeners.TestReportListner"/>
+  </listeners>
+  <test name="WM web Automation Tests_chrome(failed)">
+    <parameter name="os" value="WIN10"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.web.tests.wmtestcases.unfi.ItemSearchTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="takeScreenShot"/>
+          <include name="navigateToItem" invocation-numbers="0"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.web.tests.wmtestcases.unfi.ItemSearchTest -->
+    </classes>
+  </test> <!-- WM web Automation Tests_chrome(failed) -->
+</suite> <!-- Failed suite [WM Automation Suite] -->

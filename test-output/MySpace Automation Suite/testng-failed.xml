@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="15" guice-stage="DEVELOPMENT" name="Failed suite [MySpace Automation Suite]">
+  <listeners>
+    <listener class-name="com.innominds.team.listeners.TestReportListner"/>
+  </listeners>
+  <test name="DOM web Automation Tests_firefox(failed)">
+    <parameter name="os" value="WIN10"/>
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.web.tests.wmtestcases.unfi.SamplePOTest">
+        <methods>
+          <include name="init"/>
+          <include name="takeScreenShot"/>
+          <include name="tearDown"/>
+          <include name="loginApplication" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.web.tests.wmtestcases.unfi.SamplePOTest -->
+    </classes>
+  </test> <!-- DOM web Automation Tests_firefox(failed) -->
+</suite> <!-- Failed suite [MySpace Automation Suite] -->

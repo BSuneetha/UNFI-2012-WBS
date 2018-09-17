@@ -1,0 +1,26 @@
+Senario Name,Test Name,Browser Name,Os Name,Test Status,Test Data Row,Link to Screen Shot,Error Log,Test Type
+WhiteTest,ExcelSecurityTest,Desktop,WIN10,Pass,NA,NA,NA,Regression
+WhiteTest,WordSecurityTest,Desktop,WIN10,Pass,NA,NA,NA,Regression
+HealthCheck,IPTraceAndValiadte,Console,win10,Pass,TD 1,NA,"NA",Smoke
+HealthCheck,IPPingAndValiadte,Console,win10,Pass,TD 1,NA,"NA",Smoke
+RestApiTests,dsnDataWithAPIGet,API,WIN10,Fail, ,file://D:/streamlined/HarmonyCoreiFusion/ScreenShots/RestApiTests_dsnDataWithAPIGet_WIN10_API.png,"java.lang.AssertionError: out put does not conatin dsn_name"":""hive_dsn_testConnection timed out: connect expected [true] but found [false]",Smoke
+IFusionTest,loginApplication,chrome,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,createSource,chrome,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,logOutApplication,chrome,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,loginApplicationFailure,chrome,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,loginApplication,firefox,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,createSource,firefox,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,logOutApplication,firefox,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,loginApplicationFailure,firefox,WIN10,Skipped,NA,NA,"NA",Smoke
+HealthCheck,IPTraceAndValiadte,Console,win10,Pass,TD 1,NA,"NA",Smoke
+HealthCheck,IPPingAndValiadte,Console,win10,Pass,TD 1,NA,"NA",Smoke
+RestApiTests,dsnDataWithAPIGet,API,WIN10,Fail, ,file://D:/streamlined/HarmonyCoreiFusion/ScreenShots/RestApiTests_dsnDataWithAPIGet_WIN10_API.png,"java.lang.AssertionError: out put does not conatin dsn_name"":""hive_dsn_testConnection timed out: connect expected [true] but found [false]",Smoke
+IFusionTest,loginApplication,chrome,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,createSource,chrome,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,logOutApplication,chrome,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,loginApplicationFailure,chrome,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,loginApplication,firefox,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,createSource,firefox,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,logOutApplication,firefox,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,loginApplicationFailure,firefox,WIN10,Skipped,NA,NA,"NA",Smoke
+RestApiTests,loginTestWithAPIPost,API,WIN10,Skipped, ,NA,"NA",Smoke

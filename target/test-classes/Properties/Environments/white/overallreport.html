@@ -1,0 +1,529 @@
+<!DOCTYPE html><html>
+<head>
+<style type='text/css'>
+h1 { text-shadow: 2px 2px #808080; }
+body
+{
+background-color: #FFFFFF;
+font-family: Verdana, Geneva, sans-serif;
+text-align: center;
+}
+small
+{
+font-size: 0.7em;
+}
+table
+{
+box-shadow: 9px 9px 10px 4px #BDBDBD;
+border: 0px solid #4D7C7B;
+border-collapse: collapse;
+border-spacing: 0px;
+width: 1300px;
+margin-left: auto;
+margin-right: auto;
+table-layout:fixed;
+}
+tr.heading
+{
+background-color: #286B6A;
+color: #FFFFFF;
+font-size: 1.5em;
+font-weight: bold;
+background:-o-linear-gradient(bottom, #286B6A 5%, #000000 100%);
+background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #286B6A), color-stop(1, #000000) );
+background:-moz-linear-gradient( center top, #286B6A 5%, #000000 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#286B6A, endColorstr=#000000);
+background: -o-linear-gradient(top,#286B6A,000000);
+}
+tr.subheading
+{
+background-color: #6A90B6;
+color: #000000;
+font-weight: bold;
+font-size: 0.7em;
+text-align: justify;
+}
+tr.section
+{
+background-color: #A4A4A4;
+color: #333300;
+cursor: pointer;
+font-weight: bold;
+font-size: 0.8em;
+text-align: justify;
+background:-o-linear-gradient(bottom, #56aaff 5%, #e5e5e5 100%);
+background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #56aaff), color-stop(1, #e5e5e5) );
+background:-moz-linear-gradient( center top, #56aaff 5%, #e5e5e5 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#56aaff, endColorstr=#e5e5e5);
+background: -o-linear-gradient(top,#56aaff,e5e5e5);
+}
+tr.subsection
+{
+cursor: pointer;
+}
+tr.content
+{
+background-color: #FFFFFF;
+color: #000000;
+font-size: 0.5em;
+display: table-row;
+white-space:nowrap;
+width: 100%;
+}
+tr.content2
+{
+background-color:#;E1E1E1border: 1px solid #4D7C7B;
+color: #000000;
+font-size: 0.7em;
+display: table-row;
+}
+th
+{
+padding: 10px;
+border: 1px solid #4D7C7B;
+text-align: inherit;
+}
+th.main
+{
+padding: 10px;
+border: 1px solid #4D7C7B;
+text-align: inherit;
+font: bold 15px Arial,Helvetica,Sans-serif;
+}
+td
+{
+padding: 2px;
+font: 13px Arial,Helvetica,Sans-serif;
+border: 1px solid #4D7C7B;
+text-align: inherit;
+white-space:nowrap;
+width: 100%;
+}
+td.justified
+{
+text-align: justify;
+word-wrap: break-word;
+}
+td.pass
+{
+font-weight: bold;
+color: green;
+}
+td.skipped
+{
+font-weight: bold;
+bold; color: red;
+}
+td.fail
+{
+font-weight: bold;
+bold; color: red;
+}
+td.done, td.screenshot
+{
+font-weight:
+bold; color: black;
+}
+td.debug
+{
+font-weight: bold;
+color: blue;
+}
+td.warning
+{
+font-weight: bold;
+color: orange;
+}
+a:link {
+color: green;
+background-color: transparent;
+text-decoration: none;
+}
+a:visited {
+color: red;
+background-color: transparent;
+text-decoration: none;
+}
+a:hover {
+color: black;
+background-color: transparent;
+text-decoration: underline;
+}
+a:active {
+color: yellow;
+background-color: transparent;
+text-decoration: underline;
+}
+#myInput {
+background-image: url('/css/searchicon.png');
+}
+#myInput1 {
+background-image: url('/css/searchicon.png');
+}
+#myInput2 {
+background-image: url('/css/searchicon.png');
+}
+#myInput3 {
+background-image: url('/css/searchicon.png');
+}
+#myInput4 {
+background-image: url('/css/searchicon.png');
+}
+#myInput5 {
+background-image: url('/css/searchicon.png');
+}
+#myTable {
+border-collapse: collapse;
+}
+</style>
+<style>
+input[type="text"] {
+background: url(search-white.png) no-repeat 10px 6px #fcfcfc;
+border: 0px solid #d1d1d1;
+font: bold 12px Arial,Helvetica,Sans-serif;
+color: #300909;
+width: 110px;
+padding: 6px 12px 6px 36px;
+-webkit-border-radius: 20px;
+-moz-border-radius: 20px;
+border-radius: 100px;
+text-shadow: 0 2px 3px rgba(0, 0, 0, 0.0);
+-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset;
+-webkit-transition: all 0.7s ease 0s;
+-moz-transition: all 0.7s ease 0s;
+-o-transition: all 0.7s ease 0s;
+transition: all 0.7s ease 0s;
+}
+input[type=?ext?:focus {
+width: 100px;
+outline:none; box-shadow:none;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/jquery-ui.js" type="text/javascript"></script>
+<link href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.9/themes/blitzer/jquery-ui.css"  rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+$(function () {
+$("[id^=bb_]").click(function () {
+var id = $(this).attr('id');
+var splitId = id.split('_');
+$("#error_"+splitId[1]).dialog({
+modal: true,
+autoOpen: false,
+title: "Error Message",
+width: 700,
+height: 300
+});
+$("#error_"+splitId[1]).dialog('open');
+ });
+});
+</script>
+<script>
+function errorLog()
+{
+document.write("<script>");
+document.write("document.write('<h2>This is the quoted script</h2>')");
+document.write("</"+script>");
+function toggleMenu(objID)
+{
+if (!document.getElementById)
+return;
+var ob = document.getElementById(objID).style;
+if(ob.display === 'none')
+{
+try
+{
+ob.display='table-row-group';
+} catch(ex)
+{
+ob.display='block';
+}
+} else
+{
+ob.display='none';
+}
+}
+function toggleSubMenu(objId)
+{
+for(i=1; i<10000; i++)
+{
+var ob = document.getElementById(objId.concat(i));
+if(ob === null)
+{
+break;
+}
+if(ob.style.display === 'none')
+{
+try
+{
+ob.style.display='table-row';
+}
+catch(ex)
+{
+ob.style.display='block';
+}
+}
+else
+{
+ob.style.display='none';
+}
+}
+}
+</script>
+<script>
+function myFunction() {
+var input,filter,td, input1, filter1, td1, input2, filter2, td2, input3, filter3, td3,input4, filter4, td4,input5, filter5, td5,table, tr, i;
+input = document.getElementById("myInput");
+filter = input.value.toUpperCase();
+input1 = document.getElementById("myInput1");
+filter1 = input1.value.toUpperCase();
+input2 = document.getElementById("myInput2");
+filter2 = input2.value.toUpperCase();
+input3 = document.getElementById("myInput3");
+filter3 = input3.value.toUpperCase();
+input4 = document.getElementById("myInput4");
+filter4 = input4.value.toUpperCase();
+input5 = document.getElementById("myInput5");
+filter5 = input5.value.toUpperCase();
+table = document.getElementById("myTable");
+tr = table.getElementsByTagName("tr");
+for (i = 0; i < tr.length; i++) {
+td = tr[i].getElementsByTagName("td")[0];
+td1 = tr[i].getElementsByTagName("td")[1];
+td2 = tr[i].getElementsByTagName("td")[2];
+td3 = tr[i].getElementsByTagName("td")[3];
+td4 = tr[i].getElementsByTagName("td")[4];
+td5 = tr[i].getElementsByTagName("td")[5];
+if (td) {
+if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+if(td1){
+if (td1.innerHTML.toUpperCase().indexOf(filter1) > -1) {
+if(td2){
+if (td2.innerHTML.toUpperCase().indexOf(filter2) > -1) {
+if(td3){
+if (td3.innerHTML.toUpperCase().indexOf(filter3) > -1) {
+if(td4){
+if (td4.innerHTML.toUpperCase().indexOf(filter4) > -1) {
+if(td5){
+if (td5.innerHTML.toUpperCase().indexOf(filter5) > -1) {
+tr[i].style.display = "";
+}else{
+tr[i].style.display = "none";
+}
+}else{
+tr[i].style.display = "";
+}
+}else{
+tr[i].style.display = "none";
+}
+}else{
+tr[i].style.display = "";
+}
+}else{
+tr[i].style.display = "none";
+}
+}else{
+tr[i].style.display = "";
+}
+}else{
+tr[i].style.display = "none";
+}
+}else{
+tr[i].style.display = "";
+}
+}else{
+tr[i].style.display = "none";
+}
+}else{
+tr[i].style.display = "";
+}
+} else {
+tr[i].style.display = "none";
+}
+}
+}
+}
+</script>
+<title>Boneal - Automation Report</title
+</head>
+<body>
+<table height="100%" border="1">
+<tr class='heading'> 
+<th colspan='4' style='font-family:Copperplate Gothic Bold; font-size:1.1em;'> Boneal - Test Automation Report </th>
+</tr>
+<tr class='subheading'>
+<th>&nbsp;Start&nbsp;&nbsp;Time&nbsp;&nbsp;&nbsp;:&nbsp;</th>
+<th>&nbsp;&nbsp;04-Oct-2017 05:44 PM&nbsp;</th>
+<th>&nbsp;Pass&nbsp;&nbsp;Percentage&nbsp;&nbsp;&nbsp;:&nbsp;</th>
+<th>&nbsp;&nbsp;45.0%</th>
+</tr>
+<tr class='subheading'>
+<th>&nbsp;End&nbsp;&nbsp;Time&nbsp;&nbsp;&nbsp;&nbsp&nbsp;:&nbsp;</th>
+<th> &nbsp;&nbsp;04-Oct-2017 05:52 PM&nbsp;</th>
+<th>&nbsp;Fail&nbsp;&nbsp;Percentage&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;</th>
+<th>&nbsp;&nbsp;45.0%</th>
+</tr>
+<table height="5%" cellspacing="10" border="1">
+<tr>
+<td width="12%"><input type="text" id="myInput" onkeyup="myFunction()" size="40" placeholder="Search by scenario..." /></td>
+<td width="12%"><input type="text" id="myInput1" onkeyup="myFunction()" size="40" placeholder="Search by test..." /></td>
+<td width="12%"><input type="text" id="myInput2" onkeyup="myFunction()" size="40" placeholder="Search by browser..." /></td>
+<td width="12%"><input type="text" id="myInput3" onkeyup="myFunction()" size="40" placeholder="Search by OS..." /></td>
+<td width="12%"><input type="text" id="myInput4" onkeyup="myFunction()" size="40" placeholder="Search by Data Row..." /></td>
+<td width="12%"><input type="text" id="myInput5" onkeyup="myFunction()" size="40" placeholder="Search by Status..." /></td>
+<td width="20%"></td>
+<td width="20%"></td>
+</tr>
+</table>
+<table id="myTable" border="1">
+<tr class="header" bgcolor="#8E8A8A">
+<th class ="main" width="12%">Senario Name </th>
+<th class ="main"  width="12%">Test Name</th>
+<th class ="main"  width="12%">Browser</th>
+<th class ="main"  width="12%">OS</th>
+<th class ="main"  width="12%">Test Status</th>
+<th class ="main"  width="12%">Test Data Row</th>
+<th class ="main"  width="12%">Screenshot</th>
+<th class ="main"  width="12%">Error Log</th>
+</tr>
+<tr>
+<td width="12%">Senario Name</td>
+<td width="12%">Test Name</td>
+<td width="12%">Browser Name</td>
+<td width="12%">Os Name</td>
+<td width="7%">Test Data Row</td>
+<tr>
+<td width="12%">MicrosoftAppsTest</td>
+<td width="12%">ExcelSecurityTest</td>
+<td width="12%">Desktop</td>
+<td width="12%">WIN10</td>
+<td class = "pass" width="7%">Pass</td>
+<td width="7%">NA</td>
+<td width="20%">NA</td>
+<td class ="pass"  width="20%">NA</td>
+<tr>
+<td width="12%">MicrosoftAppsTest</td>
+<td width="12%">OneNoteSecurityTest</td>
+<td width="12%">Desktop</td>
+<td width="12%">WIN10</td>
+<td class = "fail" width="7%">Fail</td>
+<td width="7%">NA</td>
+<td class ="fail"  width="20%">
+<a target="_blank" href="NA">Screenshot</a>
+</td>
+<td width="20%">
+<p id="error_1" style="display:none" align = "center"> NA </p>
+<button id="bb_1" >Show</button>
+</td>
+<tr>
+<td width="12%">MicrosoftAppsTest</td>
+<td width="12%">WordSecurityTest</td>
+<td width="12%">Desktop</td>
+<td width="12%">WIN10</td>
+<td class = "pass" width="7%">Pass</td>
+<td width="7%">NA</td>
+<td width="20%">NA</td>
+<td class ="pass"  width="20%">NA</td>
+<tr>
+<td width="12%">IFusionTest</td>
+<td width="12%">loginApplication</td>
+<td width="12%">chrome</td>
+<td width="12%">WIN10</td>
+<td class = "pass" width="7%">Pass</td>
+<td width="7%">DR1</td>
+<td width="20%">NA</td>
+<td class ="pass"  width="20%">NA</td>
+<tr>
+<td width="12%">IFusionTest</td>
+<td width="12%">loginApplication</td>
+<td width="12%">firefox</td>
+<td width="12%">WIN10</td>
+<td class = "pass" width="7%">Pass</td>
+<td width="7%">DR1</td>
+<td width="20%">NA</td>
+<td class ="pass"  width="20%">NA</td>
+<tr>
+<td width="12%">IFusionTest</td>
+<td width="12%">createSource</td>
+<td width="12%">firefox</td>
+<td width="12%">WIN10</td>
+<td class = "fail" width="7%">Fail</td>
+<td width="7%">DR1</td>
+<td class ="fail"  width="20%">
+<a target="_blank" href="file://D:/streamlined/HarmonyCore/ScreenShots/IFusionTest_createSource_WIN10_firefox.png">Screenshot</a>
+</td>
+<td width="20%">
+<p id="error_2" style="display:none" align = "center"> java.lang.AssertionError: Test case failed due to exception Failed: to click WebElement  Build info: version: '3.5.3'  revision: 'a88d25fe6b'  time: '2017-08-29T12:42:44.417Z' System info: host: 'IM-LP-719'  ip: '192.168.99.1'  os.name: 'Windows 10'  os.arch: 'amd64'  os.version: '10.0'  java.version: '1.8.0_144' Driver info: org.openqa.selenium.firefox.FirefoxDriver Capabilities [{moz:profile=C:\Users\CPINNA~1\AppData\Local\Temp\rust_mozprofile.vKgkqBCyWIKM  rotatable=false  timeouts={implicit=0  pageLoad=300000  script=30000}  pageLoadStrategy=normal  platform=XP  specificationLevel=0  moz:accessibilityChecks=false  acceptInsecureCerts=true  browserVersion=55.0.3  platformVersion=10.0  moz:processID=13680  browserName=firefox  javascriptEnabled=true  platformName=XP}] Session ID: a52f4c9f-ba97-459d-9cff-e95259e3b7b7 expected [true] but found [false] </p>
+<button id="bb_2" >Show</button>
+</td>
+<tr>
+<td width="12%">IFusionTest</td>
+<td width="12%">createSource</td>
+<td width="12%">chrome</td>
+<td width="12%">WIN10</td>
+<td class = "pass" width="7%">Pass</td>
+<td width="7%">DR1</td>
+<td width="20%">NA</td>
+<td class ="pass"  width="20%">NA</td>
+<tr>
+<td width="12%">IFusionTest</td>
+<td width="12%">logOutApplication</td>
+<td width="12%">chrome</td>
+<td width="12%">WIN10</td>
+<td class = "fail" width="7%">Fail</td>
+<td width="7%">DR1</td>
+<td class ="fail"  width="20%">
+<a target="_blank" href="file://D:/streamlined/HarmonyCore/ScreenShots/IFusionTest_logOutApplication_WIN10_chrome.png">Screenshot</a>
+</td>
+<td width="20%">
+<p id="error_3" style="display:none" align = "center"> java.lang.AssertionError: Test case failed due to exception Failed: to click WebElement unknown error: Element is not clickable at point (1322  -58)   (Session info: chrome=61.0.3163.100)   (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233) platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information) Command duration or timeout: 0 milliseconds Build info: version: '3.5.3'  revision: 'a88d25fe6b'  time: '2017-08-29T12:42:44.417Z' System info: host: 'IM-LP-719'  ip: '192.168.99.1'  os.name: 'Windows 10'  os.arch: 'amd64'  os.version: '10.0'  java.version: '1.8.0_144' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities [{applicationCacheEnabled=false  rotatable=false  mobileEmulationEnabled=false  networkConnectionEnabled=false  chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233)  userDataDir=C:\Users\CPINNA~1\AppData\Local\Temp\scoped_dir11276_21334}  takesHeapSnapshot=true  pageLoadStrategy=normal  unhandledPromptBehavior=  databaseEnabled=false  handlesAlerts=true  hasTouchScreen=false  version=61.0.3163.100  platform=XP  browserConnectionEnabled=false  nativeEvents=true  acceptSslCerts=true  locationContextEnabled=true  webStorageEnabled=true  browserName=chrome  takesScreenshot=true  javascriptEnabled=true  platformName=XP  cssSelectorsEnabled=true  unexpectedAlertBehaviour=}] Session ID: 1b885c42799406017efc8b1942297198 expected [true] but found [false] </p>
+<button id="bb_3" >Show</button>
+</td>
+<tr>
+<td width="12%">IFusionTest</td>
+<td width="12%">logOutApplication</td>
+<td width="12%">firefox</td>
+<td width="12%">WIN10</td>
+<td class = "fail" width="7%">Fail</td>
+<td width="7%">DR1</td>
+<td class ="fail"  width="20%">
+<a target="_blank" href="file://D:/streamlined/HarmonyCore/ScreenShots/IFusionTest_logOutApplication_WIN10_firefox.png">Screenshot</a>
+</td>
+<td width="20%">
+<p id="error_4" style="display:none" align = "center"> java.lang.AssertionError: Test case failed due to exception Unable to locate element: #email For documentation on this error  please visit: http://seleniumhq.org/exceptions/no_such_element.html Build info: version: '3.5.3'  revision: 'a88d25fe6b'  time: '2017-08-29T12:42:44.417Z' System info: host: 'IM-LP-719'  ip: '192.168.99.1'  os.name: 'Windows 10'  os.arch: 'amd64'  os.version: '10.0'  java.version: '1.8.0_144' Driver info: org.openqa.selenium.firefox.FirefoxDriver Capabilities [{moz:profile=C:\Users\CPINNA~1\AppData\Local\Temp\rust_mozprofile.vKgkqBCyWIKM  rotatable=false  timeouts={implicit=0  pageLoad=300000  script=30000}  pageLoadStrategy=normal  platform=XP  specificationLevel=0  moz:accessibilityChecks=false  acceptInsecureCerts=true  browserVersion=55.0.3  platformVersion=10.0  moz:processID=13680  browserName=firefox  javascriptEnabled=true  platformName=XP}] Session ID: a52f4c9f-ba97-459d-9cff-e95259e3b7b7 *** Element info: {Using=id  value=email} expected [true] but found [false] </p>
+<button id="bb_4" >Show</button>
+</td>
+<tr>
+<td width="12%">IFusionTest</td>
+<td width="12%">loginApplicationFailure</td>
+<td width="12%">chrome</td>
+<td width="12%">WIN10</td>
+<td class = "fail" width="7%">Fail</td>
+<td width="7%">DR2</td>
+<td class ="fail"  width="20%">
+<a target="_blank" href="file://D:/streamlined/HarmonyCore/ScreenShots/IFusionTest_loginApplicationFailure_WIN10_chrome.png">Screenshot</a>
+</td>
+<td width="20%">
+<p id="error_5" style="display:none" align = "center"> java.lang.AssertionError: Test case failed due to exception no such element: Unable to locate element: {"method":"id" "selector":"email"}   (Session info: chrome=61.0.3163.100)   (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233) platform=Windows NT 10.0.10240 x86_64) (WARNING: The server did not provide any stacktrace information) Command duration or timeout: 0 milliseconds For documentation on this error  please visit: http://seleniumhq.org/exceptions/no_such_element.html Build info: version: '3.5.3'  revision: 'a88d25fe6b'  time: '2017-08-29T12:42:44.417Z' System info: host: 'IM-LP-719'  ip: '192.168.99.1'  os.name: 'Windows 10'  os.arch: 'amd64'  os.version: '10.0'  java.version: '1.8.0_144' Driver info: org.openqa.selenium.chrome.ChromeDriver Capabilities [{applicationCacheEnabled=false  rotatable=false  mobileEmulationEnabled=false  networkConnectionEnabled=false  chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233)  userDataDir=C:\Users\CPINNA~1\AppData\Local\Temp\scoped_dir11276_21334}  takesHeapSnapshot=true  pageLoadStrategy=normal  unhandledPromptBehavior=  databaseEnabled=false  handlesAlerts=true  hasTouchScreen=false  version=61.0.3163.100  platform=XP  browserConnectionEnabled=false  nativeEvents=true  acceptSslCerts=true  locationContextEnabled=true  webStorageEnabled=true  browserName=chrome  takesScreenshot=true  javascriptEnabled=true  platformName=XP  cssSelectorsEnabled=true  unexpectedAlertBehaviour=}] Session ID: 1b885c42799406017efc8b1942297198 *** Element info: {Using=id  value=email} expected [true] but found [false] </p>
+<button id="bb_5" >Show</button>
+</td>
+<tr>
+<td width="12%">IFusionTest</td>
+<td width="12%">loginApplicationFailure</td>
+<td width="12%">firefox</td>
+<td width="12%">WIN10</td>
+<td class = "fail" width="7%">Fail</td>
+<td width="7%">DR2</td>
+<td class ="fail"  width="20%">
+<a target="_blank" href="file://D:/streamlined/HarmonyCore/ScreenShots/IFusionTest_loginApplicationFailure_WIN10_firefox.png">Screenshot</a>
+</td>
+<td width="20%">
+<p id="error_6" style="display:none" align = "center"> java.lang.AssertionError: Test case failed due to exception Unable to locate element: #email For documentation on this error  please visit: http://seleniumhq.org/exceptions/no_such_element.html Build info: version: '3.5.3'  revision: 'a88d25fe6b'  time: '2017-08-29T12:42:44.417Z' System info: host: 'IM-LP-719'  ip: '192.168.99.1'  os.name: 'Windows 10'  os.arch: 'amd64'  os.version: '10.0'  java.version: '1.8.0_144' Driver info: org.openqa.selenium.firefox.FirefoxDriver Capabilities [{moz:profile=C:\Users\CPINNA~1\AppData\Local\Temp\rust_mozprofile.vKgkqBCyWIKM  rotatable=false  timeouts={implicit=0  pageLoad=300000  script=30000}  pageLoadStrategy=normal  platform=XP  specificationLevel=0  moz:accessibilityChecks=false  acceptInsecureCerts=true  browserVersion=55.0.3  platformVersion=10.0  moz:processID=13680  browserName=firefox  javascriptEnabled=true  platformName=XP}] Session ID: a52f4c9f-ba97-459d-9cff-e95259e3b7b7 *** Element info: {Using=id  value=email} expected [true] but found [false] </p>
+<button id="bb_6" >Show</button>
+</td>
+</tr>
+</table>
+</table>
+</body>
+</html>

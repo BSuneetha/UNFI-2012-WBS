@@ -1,0 +1,37 @@
+<!--<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Suite" thread-count="4" parallel="tests" configfailurepolicy="continue">
+
+
+	  <groups> <run> <include name="Regression" /> </run> </groups> 
+
+	<listeners>
+		<listener class-name="com.innominds.itaf.listeners.TestReportListner" />
+	</listeners>	
+	
+	<test name="Appium Tests" enabled="true" preserve-order="true">
+		<parameter name="browser" value="appium" />
+		<parameter name="os" value="WIN10" />
+		<classes>
+   	 			<class name="com.mobile.android.tests.MicrosoftAppsTest">
+	 				
+				</class>		
+		</classes>
+	</test>
+	<test name="IFusion web Automation Tests_firefox" enabled="true">
+		<parameter name="browser" value="firefox" />
+		<parameter name="os" value="WIN10" />
+		<classes>
+			<class name="com.web.tests.webtestcases.ifusion.IFusionTest" />
+		</classes>
+	</test>
+	
+	<test name="IFusion web Automation Tests_chrome" enabled="true">
+		<parameter name="browser" value="chrome" />
+		<parameter name="os" value="WIN10" />
+		<classes>
+			<class name="com.web.tests.webtestcases.ifusion.IFusionTest" />
+		</classes>
+	</test> 
+	
+</suite>-->

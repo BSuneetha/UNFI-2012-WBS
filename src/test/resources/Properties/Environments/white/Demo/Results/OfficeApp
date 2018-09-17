@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run start-time="2017-10-01 11:19:48Z">
+  <command-line><![CDATA[D:\Microsoft\nunit3\nunit3-console.exe  D:\Microsoft\Demo\NUnit.OfficeAppsTests\NUnit.OfficeAppsTests\NUnit.OfficeAppsTests.csproj --result:D:\Microsoft\Demo\Results\OfficeApp]]></command-line>
+</test-run>

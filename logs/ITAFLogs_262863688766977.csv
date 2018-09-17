@@ -1,0 +1,14 @@
+Senario Name,Test Name,Browser Name,Os Name,Test Status,Test Data Row,Link to Screen Shot,Error Log,Test Type
+Senario Name,Test Name,Browser Name,Os Name,Test Status,Test Data Row,Link to Screen Shot,Error Log,Test Type
+HealthCheck,IPTraceAndValiadte,NA,NA,Fail,NA,file://C:/harmonycoreifusion/ScreenShots/HealthCheck_IPTraceAndValiadte_null_null.png,"IOError: (2  'File not found - D:\\streamlined\\HarmonyCoreiFusion\\src\\test\\resources\\pyscripts\\pinger.py (The system cannot find the path specified)')",Smoke
+HealthCheck,IPTraceAndValiadte,NA,NA,Fail,NA,file://C:/harmonycoreifusion/ScreenShots/HealthCheck_IPTraceAndValiadte_null_null.png,"IOError: (2  'File not found - D:\\streamlined\\HarmonyCoreiFusion\\src\\test\\resources\\pyscripts\\tracert.py (The system cannot find the path specified)')",Smoke
+IFusionTest,loginApplication,firefox,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,createSource,firefox,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,logOutApplication,firefox,WIN10,Skipped,NA,NA,"NA",Smoke
+IFusionTest,loginApplicationFailure,firefox,WIN10,Skipped,NA,NA,"NA",Smoke
+RestApiTests,dsnDataWithAPIGet,API,WIN10,Fail, ,file://C:/harmonycoreifusion/ScreenShots/RestApiTests_dsnDataWithAPIGet_WIN10_API.png,"java.lang.AssertionError: out put does not conatin dsn_name"":""hive_dsn_testConnection timed out: connect expected [true] but found [false]",Smoke
+RestApiTests,loginTestWithAPIPost,API,WIN10,Skipped, ,NA,"NA",Smoke
+IFusionTest,loginApplication,chrome,WIN10,Fail,DR1,file://C:/harmonycoreifusion/ScreenShots/IFusionTest_loginApplication_WIN10_chrome.png,"java.lang.AssertionError: Test case failed due to exception Failed: to enter input text null expected [true] but found [false]",Smoke
+IFusionTest,createSource,chrome,WIN10,Skipped,DR1,NA,"NA",Smoke
+IFusionTest,logOutApplication,chrome,WIN10,Skipped,DR1,NA,"NA",Smoke
+IFusionTest,loginApplicationFailure,chrome,WIN10,Skipped,DR1,NA,"NA",Smoke

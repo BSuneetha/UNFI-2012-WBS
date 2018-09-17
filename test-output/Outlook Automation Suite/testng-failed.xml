@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="15" guice-stage="DEVELOPMENT" name="Failed suite [Outlook Automation Suite]" parallel="tests">
+  <test name="IFusion web Automation Tests_chrome(failed)" parallel="tests">
+    <parameter name="os" value="WIN10"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.web.tests.webtestcases.ifusion.OutlookTest">
+        <methods>
+          <include name="logOutApplication" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="loginApplication" invocation-numbers="0"/>
+          <include name="takeScreenShot"/>
+          <include name="init"/>
+        </methods>
+      </class> <!-- com.web.tests.webtestcases.ifusion.OutlookTest -->
+    </classes>
+  </test> <!-- IFusion web Automation Tests_chrome(failed) -->
+</suite> <!-- Failed suite [Outlook Automation Suite] -->

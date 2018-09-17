@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="15" guice-stage="DEVELOPMENT" name="Failed suite [Automation Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.innominds.team.listeners.TestReportListner"/>
+  </listeners>
+  <test name="IFusion web Automation Tests_firefox(failed)" parallel="tests">
+    <parameter name="os" value="WIN10"/>
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.web.tests.apiTestCases.ifusion.RestApiTests">
+        <methods>
+          <include name="takeScreenShot"/>
+        </methods>
+      </class> <!-- com.web.tests.apiTestCases.ifusion.RestApiTests -->
+      <class name="com.web.tests.webtestcases.ifusion.IFusionTest">
+        <methods>
+          <include name="createSource" invocation-numbers="0"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="takeScreenShot"/>
+          <include name="logOutApplication" invocation-numbers="0"/>
+          <include name="loginApplication" invocation-numbers="0"/>
+          <include name="loginApplicationFailure" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.web.tests.webtestcases.ifusion.IFusionTest -->
+    </classes>
+  </test> <!-- IFusion web Automation Tests_firefox(failed) -->
+  <test name="IFusion API Automation Tests(failed)" parallel="tests">
+    <parameter name="os" value="WIN10"/>
+    <parameter name="browser" value="API"/>
+    <classes>
+      <class name="com.web.tests.apiTestCases.ifusion.RestApiTests">
+        <methods>
+          <include name="loginTestWithAPIPost" invocation-numbers="0"/>
+          <include name="takeScreenShot"/>
+          <include name="dsnDataWithAPIGet" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.web.tests.apiTestCases.ifusion.RestApiTests -->
+      <class name="com.web.tests.webtestcases.ifusion.IFusionTest">
+        <methods>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="takeScreenShot"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.web.tests.webtestcases.ifusion.IFusionTest -->
+    </classes>
+  </test> <!-- IFusion API Automation Tests(failed) -->
+  <test name="IFusion web Automation Tests_chrome(failed)" parallel="tests">
+    <parameter name="os" value="WIN10"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.web.tests.apiTestCases.ifusion.RestApiTests">
+        <methods>
+          <include name="takeScreenShot"/>
+        </methods>
+      </class> <!-- com.web.tests.apiTestCases.ifusion.RestApiTests -->
+      <class name="com.web.tests.webtestcases.ifusion.IFusionTest">
+        <methods>
+          <include name="createSource" invocation-numbers="0"/>
+          <include name="init"/>
+          <include name="init"/>
+          <include name="takeScreenShot"/>
+          <include name="logOutApplication" invocation-numbers="0"/>
+          <include name="loginApplication" invocation-numbers="0"/>
+          <include name="loginApplicationFailure" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.web.tests.webtestcases.ifusion.IFusionTest -->
+    </classes>
+  </test> <!-- IFusion web Automation Tests_chrome(failed) -->
+</suite> <!-- Failed suite [Automation Suite] -->

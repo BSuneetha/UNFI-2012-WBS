@@ -1,0 +1,11 @@
+2018-09-28 16:42:39,757 WARN  [Log] Browser opened 
+2018-09-28 16:42:42,241 INFO  [Log] URL entered 
+2018-09-28 16:42:42,256 INFO  [Log] Navigated to google 
+2018-09-28 16:42:42,256 INFO  [Log] Info ---- google 
+2018-09-28 16:42:42,256 ERROR [Log] error ---- google 
+2018-09-28 16:42:42,897 WARN  [Log] Browser closed 
+2018-09-28 16:52:16,131 WARN  [Log] Browser opened 
+2018-09-28 16:52:20,569 INFO  [Log] URL entered 
+2018-09-28 16:52:20,590 INFO  [Log] Navigated to google 
+2018-09-28 16:52:20,590 INFO  [Log] Info ---- google 
+2018-09-28 16:52:20,590 ERROR [Log] error ---- google 

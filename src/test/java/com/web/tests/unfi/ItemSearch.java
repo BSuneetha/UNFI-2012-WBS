@@ -1,7 +1,10 @@
 package com.web.tests.unfi;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -44,5 +47,35 @@ public class ItemSearch extends PageActionUtils {
 			Assert.assertTrue(false, "Test case failed due to exception " + e.getMessage());
 		}
 
+		
+	}
+	
+	//Load log file and search for string.
+	public String SearchItemInLogFile(String filepath, String searchItem) {
+		File file = new File(filepath);
+		String ItemFound=null;
+		try {
+		    Scanner scanner = new Scanner(file);
+
+		    while (scanner.hasNextLine()) {
+		    	
+		        String line = scanner.nextLine();
+		    
+		        String Words[]=line.split(" ");
+		        for (int i=0; i< Words.length; i++) { 
+		        	if(Words[i].equalsIgnoreCase(searchItem)) {
+		        		System.out.println("string found ");
+		        		ItemFound=searchItem;
+		        	}
+		        	else
+		        		System.out.println("string not found ");
+		        }
+		    }
+		    
+		   scanner.close();
+		} catch(FileNotFoundException e) { 
+		    
+		}
+		return ItemFound;
 	}
 }

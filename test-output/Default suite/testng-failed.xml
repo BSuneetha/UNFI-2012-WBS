@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.web.tests.wmtestcases.unfi.SamplePOTest">
+      <class name="com.web.tests.unfi.LogsDemo">
         <methods>
-          <include name="init"/>
           <include name="tearDown"/>
-          <include name="loginApplication"/>
+          <include name="init"/>
+          <include name="TestGoogle"/>
         </methods>
-      </class> <!-- com.web.tests.wmtestcases.unfi.SamplePOTest -->
+      </class> <!-- com.web.tests.unfi.LogsDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

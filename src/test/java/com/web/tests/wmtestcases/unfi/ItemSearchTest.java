@@ -77,7 +77,7 @@ public class ItemSearchTest extends DriverManager{
 		return null;
 	}	
 	
-	@Test(dataProvider = "LoginDP", enabled = true, priority = 1)
+	/*@Test(dataProvider = "LoginDP", enabled = true, priority = 1)
 	public void loginApplication(LoginDP dp, ITestContext context) {
 		context.setAttribute("dpName", dp.td.get("DataRow"));
 		login.validateLogin(dp, driver);
@@ -87,7 +87,7 @@ public class ItemSearchTest extends DriverManager{
 	public void navigateToItem(ItemSearchDP dp, ITestContext context) {
 		context.setAttribute("dpName", dp.td.get("DataRow"));
 		profile.navigateToItem(dp, driver);
-	}	
+	}*/	
 	
 /*	@Test(dataProvider = "LoginDP", enabled = true, priority = 3)
 	public void logOutApplication(LoginDP dp, ITestContext context) {
@@ -95,6 +95,8 @@ public class ItemSearchTest extends DriverManager{
 		login.validateLogout(dp, driver);
 	}
 */
+	
+	
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
 

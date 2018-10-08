@@ -1,195 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="WM Automation Suite" duration-ms="224314" started-at="2018-09-17T10:44:21Z" finished-at="2018-09-17T10:48:06Z">
+  <suite name="Default suite" duration-ms="6142" started-at="2018-09-28T11:13:18Z" finished-at="2018-09-28T11:13:25Z">
     <groups>
-      <group name="Smoke">
-        <method signature="ItemSearchTest.navigateToItem(com.web.tests.unfi.ItemSearchDP, org.testng.ITestContext)[pri:2, instance:com.web.tests.wmtestcases.unfi.ItemSearchTest@14dd9eb7]" name="navigateToItem" class="com.web.tests.wmtestcases.unfi.ItemSearchTest"/>
-      </group> <!-- Smoke -->
     </groups>
-    <test name="WM web Automation Tests_chrome" duration-ms="224314" started-at="2018-09-17T10:44:21Z" finished-at="2018-09-17T10:48:06Z">
-      <class name="com.web.tests.wmtestcases.unfi.ItemSearchTest">
-        <test-method status="PASS" signature="init(java.lang.String, java.lang.String)[pri:0, instance:com.web.tests.wmtestcases.unfi.ItemSearchTest@14dd9eb7]" name="init" is-config="true" duration-ms="82348" started-at="2018-09-17T16:14:22Z" finished-at="2018-09-17T16:15:44Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[WIN10]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="6142" started-at="2018-09-28T11:13:18Z" finished-at="2018-09-28T11:13:25Z">
+      <class name="com.web.tests.unfi.LogsDemo">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.web.tests.unfi.LogsDemo@5b239d7d]" name="init" is-config="true" duration-ms="5469" started-at="2018-09-28T16:43:18Z" finished-at="2018-09-28T16:43:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="loginApplication(com.web.tests.unfi.LoginDP, org.testng.ITestContext)[pri:1, instance:com.web.tests.wmtestcases.unfi.ItemSearchTest@14dd9eb7]" name="loginApplication" duration-ms="59289" started-at="2018-09-17T16:16:00Z" data-provider="LoginDP" finished-at="2018-09-17T16:16:59Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[com.web.tests.unfi.LoginDP@867ba60]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@5ba745bc]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="TestGoogle()[pri:1, instance:com.web.tests.unfi.LogsDemo@5b239d7d]" name="TestGoogle" duration-ms="6" started-at="2018-09-28T16:43:24Z" finished-at="2018-09-28T16:43:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginApplication -->
-        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:com.web.tests.wmtestcases.unfi.ItemSearchTest@14dd9eb7]" name="takeScreenShot" is-config="true" duration-ms="2" started-at="2018-09-17T16:16:59Z" finished-at="2018-09-17T16:16:59Z">
+        </test-method> <!-- TestGoogle -->
+        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:com.web.tests.unfi.LogsDemo@5b239d7d]" name="takeScreenShot" is-config="true" duration-ms="1" started-at="2018-09-28T16:43:24Z" finished-at="2018-09-28T16:43:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginApplication status=SUCCESS method=ItemSearchTest.loginApplication(com.web.tests.unfi.LoginDP, org.testng.ITestContext)[pri:1, instance:com.web.tests.wmtestcases.unfi.ItemSearchTest@14dd9eb7] output={null}]]]>
+                <![CDATA[[TestResult name=TestGoogle status=SUCCESS method=LogsDemo.TestGoogle()[pri:1, instance:com.web.tests.unfi.LogsDemo@5b239d7d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method status="FAIL" signature="navigateToItem(com.web.tests.unfi.ItemSearchDP, org.testng.ITestContext)[pri:2, instance:com.web.tests.wmtestcases.unfi.ItemSearchTest@14dd9eb7]" name="navigateToItem" duration-ms="64731" started-at="2018-09-17T16:17:01Z" data-provider="ItemSearchDP" finished-at="2018-09-17T16:18:05Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[com.web.tests.unfi.ItemSearchDP@2fa3be26]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@5ba745bc]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Test case failed due to exception no such element: Unable to locate element: {"method":"link text","selector":"Items"}
-  (Session info: chrome=68.0.3440.106)
-  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'IM-RT-LP-141', ip: '10.1.148.28', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\nkapoor\AppData\Local\Temp\scoped_dir5312_18719}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=68.0.3440.106, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3c2726c06c98d047dbe7eafdd165fa75
-*** Element info: {Using=link text, value=Items} expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Test case failed due to exception no such element: Unable to locate element: {"method":"link text","selector":"Items"}
-  (Session info: chrome=68.0.3440.106)
-  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'IM-RT-LP-141', ip: '10.1.148.28', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_181'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, hasTouchScreen=false, platform=XP, acceptSslCerts=false, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, platformName=XP, setWindowRect=true, unexpectedAlertBehaviour=, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91), userDataDir=C:\Users\nkapoor\AppData\Local\Temp\scoped_dir5312_18719}, takesHeapSnapshot=true, pageLoadStrategy=normal, unhandledPromptBehavior=, databaseEnabled=false, handlesAlerts=true, version=68.0.3440.106, browserConnectionEnabled=false, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3c2726c06c98d047dbe7eafdd165fa75
-*** Element info: {Using=link text, value=Items} expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at com.web.tests.unfi.ItemSearch.navigateToItem(ItemSearch.java:44)
-	at com.web.tests.wmtestcases.unfi.ItemSearchTest.navigateToItem(ItemSearchTest.java:89)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="SearchItemInLog()[pri:2, instance:com.web.tests.unfi.LogsDemo@5b239d7d]" name="SearchItemInLog" duration-ms="8" started-at="2018-09-28T16:43:24Z" finished-at="2018-09-28T16:43:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigateToItem -->
-        <test-method status="FAIL" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:com.web.tests.wmtestcases.unfi.ItemSearchTest@14dd9eb7]" name="takeScreenShot" is-config="true" duration-ms="0" started-at="2018-09-17T16:18:05Z" finished-at="2018-09-17T16:18:05Z">
+        </test-method> <!-- SearchItemInLog -->
+        <test-method status="PASS" signature="takeScreenShot(org.testng.ITestResult)[pri:0, instance:com.web.tests.unfi.LogsDemo@5b239d7d]" name="takeScreenShot" is-config="true" duration-ms="0" started-at="2018-09-28T16:43:24Z" finished-at="2018-09-28T16:43:24Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=navigateToItem status=FAILURE method=ItemSearchTest.navigateToItem(com.web.tests.unfi.ItemSearchDP, org.testng.ITestContext)[pri:2, instance:com.web.tests.wmtestcases.unfi.ItemSearchTest@14dd9eb7] output={null}]]]>
+                <![CDATA[[TestResult name=SearchItemInLog status=SUCCESS method=LogsDemo.SearchItemInLog()[pri:2, instance:com.web.tests.unfi.LogsDemo@5b239d7d] output={null}]]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Test case failed due to exception Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'IM-RT-LP-141', ip: '10.1.148.28', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_181'
-Driver info: driver.version: RemoteWebDriver expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Test case failed due to exception Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
-System info: host: 'IM-RT-LP-141', ip: '10.1.148.28', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_181'
-Driver info: driver.version: RemoteWebDriver expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at com.innominds.team.driverinit.DriverManager.takeScreenShot(DriverManager.java:382)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- takeScreenShot -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.web.tests.wmtestcases.unfi.ItemSearchTest@14dd9eb7]" name="tearDown" is-config="true" duration-ms="1" started-at="2018-09-17T16:18:06Z" finished-at="2018-09-17T16:18:06Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.web.tests.unfi.LogsDemo@5b239d7d]" name="tearDown" is-config="true" duration-ms="628" started-at="2018-09-28T16:43:24Z" finished-at="2018-09-28T16:43:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.web.tests.wmtestcases.unfi.ItemSearchTest -->
-    </test> <!-- WM web Automation Tests_chrome -->
-  </suite> <!-- WM Automation Suite -->
+      </class> <!-- com.web.tests.unfi.LogsDemo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
